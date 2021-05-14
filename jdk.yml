@@ -2,6 +2,7 @@
 - hosts: all
   become: yes
   become_user: root
+  gather_facts: false
   tasks:
     - name: install openjdk-8-jre-headless
       apt: name=openjdk-8-jre-headless  update_cache=yes state=latest
